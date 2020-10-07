@@ -34,7 +34,7 @@ function hydrate() {
         }
         let note = ((e.note.number + 3) % 12) + 1
         let circle = pic.findOne('#c' + note)
-        circle.front().transform({ scale: 6 }).opacity(1)
+        circle.front().transform({ scale: 1.6 }).opacity(1)
       })
 
       input.addListener('noteoff', 'all', function (e) {
@@ -48,7 +48,7 @@ function hydrate() {
   function activate(e) {
     const el = SVG(e.target)
     circles.opacity(0.25)
-    el.front().opacity(1).animate(200).transform({ scale: 3 })
+    el.front().opacity(1).animate(200).transform({ scale: 1.6 })
   }
 
   function deactivate(e) {
